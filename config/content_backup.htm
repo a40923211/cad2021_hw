@@ -6,7 +6,60 @@
 <p>網站連結: <a href="https://a40923211.github.io/cad2021_hw/">https://a40923211.github.io/cad2021_hw/</a></p>
 <p>其他與作者或作業相關資料說明或介紹</p>
 <h1>Task</h1>
-<h2>hwpages</h2>
+<h2>hwpages 第二種</h2>
+<!-- 導入 brython 程式庫 -->
+<script src="/get_page/cmsimde/static/brython.js"></script>
+<script src="/get_page/cmsimde/static/brython_stdlib.js"></script>
+<!-- 啟動 Brython -->
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
+}
+</script>
+<div id="brython_div"></div>
+<script type="text/python">
+from browser import html
+from browser import document
+import random
+
+brython_div = document["brython_div"]
+
+url = "https://gist.githubusercontent.com/mdecourse/b11a88a98655d41055c47f08fe94788f/raw/8a27e6885ee1a5074bcf864d741679afeac796c4/2b_w2_stud_list.txt"
+
+data = open(url).readlines()
+# 檢查資料筆數, 第一筆為 title
+#print(data)
+#print(len(data))
+data = data[1:]
+#print(data)
+
+# 根據 href 與 content 將 html 元件中的 anchor 插入頁面
+def makeLink(href, content):
+    brython_div <= html.A(content, href=href)
+    #brython_div <= html.BR()
+
+
+# 從學員資料中隨機取出 10 位學員的網頁進行查核
+select = 10
+#random.shuffle(data)
+#data = data[:select]
+course = "cad2021"
+
+for i in range(len(data)):
+    num_github = data[i] 
+    num = num_github.split("\t")[0]
+    account = num_github.split("\t")[1]
+    if account == "":
+        account = num
+    content = str(num)
+    hwhref = "https://"+ str(account) + ".github.io/"+course+ "_hw"
+    repohref = "https://github.com/"+ str(account) +"/"+course +"_hw"
+    brython_div <= "repo: "
+    makeLink(repohref, content)
+    brython_div <= " www: "
+    makeLink(hwhref, content)
+    brython_div <= html.BR()
+</script><h2>hwpages</h2>
 <p><img alt="" height="245" src="/images/23.png" width="300"/></p>
 <p><img alt="" height="191" src="/images/12.png" width="283"/></p>
 <p>使用excel為每個學號加上前墜連結與後墜連結</p>
@@ -430,8 +483,6 @@ end</pre>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/2qc0-yTXBts" title="YouTube video player" width="560"></iframe></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/PDSmRPh6TaM" title="YouTube video player" width="560"></iframe></p>
 <h1>run</h1>
-<p></p>
-<h2>run</h2>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
