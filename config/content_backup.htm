@@ -6,302 +6,250 @@
 <p>網站連結: <a href="https://a40923211.github.io/cad2021_hw/">https://a40923211.github.io/cad2021_hw/</a></p>
 <p>其他與作者或作業相關資料說明或介紹</p>
 <h1>Task</h1>
-<h2>hwpages 第二種</h2>
-<!-- 導入 brython 程式庫 -->
-<script src="/get_page/cmsimde/static/brython.js"></script>
-<script src="/get_page/cmsimde/static/brython_stdlib.js"></script>
-<!-- 啟動 Brython -->
-<script>
-window.onload=function(){
-brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
-}
-</script>
-<div id="brython_div"></div>
-<script type="text/python">
-from browser import html
-from browser import document
-import random
-
-brython_div = document["brython_div"]
-
-url = "https://gist.githubusercontent.com/mdecourse/b11a88a98655d41055c47f08fe94788f/raw/8a27e6885ee1a5074bcf864d741679afeac796c4/2b_w2_stud_list.txt"
-
-data = open(url).readlines()
-# 檢查資料筆數, 第一筆為 title
-#print(data)
-#print(len(data))
-data = data[1:]
-#print(data)
-
-# 根據 href 與 content 將 html 元件中的 anchor 插入頁面
-def makeLink(href, content):
-    brython_div <= html.A(content, href=href)
-    #brython_div <= html.BR()
-
-
-# 從學員資料中隨機取出 10 位學員的網頁進行查核
-select = 10
-#random.shuffle(data)
-#data = data[:select]
-course = "cad2021"
-
-for i in range(len(data)):
-    num_github = data[i] 
-    num = num_github.split("\t")[0]
-    account = num_github.split("\t")[1]
-    if account == "":
-        account = num
-    content = str(num)
-    hwhref = "https://"+ str(account) + ".github.io/"+course+ "_hw"
-    repohref = "https://github.com/"+ str(account) +"/"+course +"_hw"
-    brython_div <= "repo: "
-    makeLink(repohref, content)
-    brython_div <= " www: "
-    makeLink(hwhref, content)
-    brython_div <= html.BR()
-</script><h2>hwpages</h2>
+<p></p><h2>hwpages</h2>
 <p><img alt="" height="245" src="/images/23.png" width="300"/></p>
 <p><img alt="" height="191" src="/images/12.png" width="283"/></p>
 <p>使用excel為每個學號加上前墜連結與後墜連結</p>
 <p>="https://"&amp;B2&amp;".github.io/cad2021_hw/content/index.html"</p>
 <p>之後使用hyperlink指令為每個連結加入超連結，最後輸出，貼到這裡</p>
-<table width="582">
+<table style="width: 536.425px;">
 <tbody>
-<tr>
-<td width="72">40723126</td>
-<td width="76"><a href="https://40723126.github.io/cad2021_hw/">40723126</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40723126</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40723126.github.io/cad2021_hw/">40723126</a></td>
 </tr>
-<tr>
-<td>40723135</td>
-<td><a href="https://40723135.github.io/cad2021_hw/">40723135</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40723135</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40723135.github.io/cad2021_hw/">40723135</a></td>
 </tr>
-<tr>
-<td>40723217</td>
-<td><a href="https://40723217.github.io/cad2021_hw/">40723217</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40723217</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40723217.github.io/cad2021_hw/">40723217</a></td>
 </tr>
-<tr>
-<td>40732331</td>
-<td><a href="https://40732331.github.io/cad2021_hw/">40732331</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40732331</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40732331.github.io/cad2021_hw/">40732331</a></td>
 </tr>
-<tr>
-<td>40823114</td>
-<td><a href="https://40823114.github.io/cad2021_hw/">40823114</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40823114</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40823114.github.io/cad2021_hw/">40823114</a></td>
 </tr>
-<tr>
-<td>40823115</td>
-<td><a href="https://40823115.github.io/cad2021_hw/">40823115</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40823115</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40823115.github.io/cad2021_hw/">40823115</a></td>
 </tr>
-<tr>
-<td>40823117</td>
-<td><a href="https://pyc40823117.github.io/cad2021_hw/">40823117</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40823117</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://pyc40823117.github.io/cad2021_hw/">40823117</a></td>
 </tr>
-<tr>
-<td>40823119</td>
-<td><a href="https://.github.io/cad2021_hw/">40823119</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40823119</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://.github.io/cad2021_hw/">40823119</a></td>
 </tr>
-<tr>
-<td>40823122</td>
-<td><a href="https://40823122.github.io/cad2021_hw/">40823122</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40823122</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40823122.github.io/cad2021_hw/">40823122</a></td>
 </tr>
-<tr>
-<td>40823127</td>
-<td><a href="https://40823127.github.io/cad2021_hw/">40823127</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40823127</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40823127.github.io/cad2021_hw/">40823127</a></td>
 </tr>
-<tr>
-<td>40823146</td>
-<td><a href="https://40823146.github.io/cad2021_hw/">40823146</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40823146</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40823146.github.io/cad2021_hw/">40823146</a></td>
 </tr>
-<tr>
-<td>40823148</td>
-<td><a href="https://40823148.github.io/cad2021_hw/">40823148</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40823148</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40823148.github.io/cad2021_hw/">40823148</a></td>
 </tr>
-<tr>
-<td>40823215</td>
-<td><a href="https://40823215.github.io/cad2021_hw/">40823215</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40823215</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40823215.github.io/cad2021_hw/">40823215</a></td>
 </tr>
-<tr>
-<td>40871106</td>
-<td><a href="https://40871106.github.io/cad2021_hw/">40871106</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40871106</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40871106.github.io/cad2021_hw/">40871106</a></td>
 </tr>
-<tr>
-<td>40923201</td>
-<td><a href="https://40923201.github.io/cad2021_hw/">40923201</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923201</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923201.github.io/cad2021_hw/">40923201</a></td>
 </tr>
-<tr>
-<td>40923203</td>
-<td><a href="https://youshin40923203.github.io/cad2021_hw/">40923203</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923203</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://youshin40923203.github.io/cad2021_hw/">40923203</a></td>
 </tr>
-<tr>
-<td>40923204</td>
-<td><a href="https://40923204.github.io/cad2021_hw/">40923204</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923204</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923204.github.io/cad2021_hw/">40923204</a></td>
 </tr>
-<tr>
-<td>40923205</td>
-<td><a href="https://40923205.github.io/cad2021_hw/">40923205</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923205</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923205.github.io/cad2021_hw/">40923205</a></td>
 </tr>
-<tr>
-<td>40923206</td>
-<td><a href="https://40923206-1.github.io/cad2021_hw/">40923206</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923206</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923206-1.github.io/cad2021_hw/">40923206</a></td>
 </tr>
-<tr>
-<td>40923207</td>
-<td><a href="https://40923207.github.io/cad2021_hw/">40923207</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923207</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923207.github.io/cad2021_hw/">40923207</a></td>
 </tr>
-<tr>
-<td>40923208</td>
-<td><a href="https://nfu40923208.github.io/cad2021_hw/">40923208</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923208</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://nfu40923208.github.io/cad2021_hw/">40923208</a></td>
 </tr>
-<tr>
-<td>40923209</td>
-<td><a href="https://nfu40923209.github.io/cad2021_hw/">40923209</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923209</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://nfu40923209.github.io/cad2021_hw/">40923209</a></td>
 </tr>
-<tr>
-<td>40923210</td>
-<td><a href="https://40923210.github.io/cad2021_hw/">40923210</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923210</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923210.github.io/cad2021_hw/">40923210</a></td>
 </tr>
-<tr>
-<td>40923211</td>
-<td><a href="https://a40923211.github.io/cad2021_hw/">40923211</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923211</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://a40923211.github.io/cad2021_hw/">40923211</a></td>
 </tr>
-<tr>
-<td>40923212</td>
-<td><a href="https://40923212.github.io/cad2021_hw/">40923212</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923212</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923212.github.io/cad2021_hw/">40923212</a></td>
 </tr>
-<tr>
-<td>40923213</td>
-<td><a href="https://40923213.github.io/cad2021_hw/">40923213</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923213</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923213.github.io/cad2021_hw/">40923213</a></td>
 </tr>
-<tr>
-<td>40923214</td>
-<td><a href="https://40923214.github.io/cad2021_hw/">40923214</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923214</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923214.github.io/cad2021_hw/">40923214</a></td>
 </tr>
-<tr>
-<td>40923216</td>
-<td><a href="https://40923216.github.io/cad2021_hw/">40923216</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923216</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923216.github.io/cad2021_hw/">40923216</a></td>
 </tr>
-<tr>
-<td>40923217</td>
-<td><a href="https://40923217.github.io/cad2021_hw/">40923217</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923217</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923217.github.io/cad2021_hw/">40923217</a></td>
 </tr>
-<tr>
-<td>40923218</td>
-<td><a href="https://40923218.github.io/cad2021_hw/">40923218</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923218</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923218.github.io/cad2021_hw/">40923218</a></td>
 </tr>
-<tr>
-<td>40923219</td>
-<td><a href="https://nfu40923219.github.io/cad2021_hw/">40923219</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923219</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://nfu40923219.github.io/cad2021_hw/">40923219</a></td>
 </tr>
-<tr>
-<td>40923220</td>
-<td><a href="https://40923220.github.io/cad2021_hw/">40923220</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923220</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923220.github.io/cad2021_hw/">40923220</a></td>
 </tr>
-<tr>
-<td>40923221</td>
-<td><a href="https://40923221.github.io/cad2021_hw/">40923221</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923221</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923221.github.io/cad2021_hw/">40923221</a></td>
 </tr>
-<tr>
-<td>40923223</td>
-<td><a href="https://40923223.github.io/cad2021_hw/">40923223</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923223</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923223.github.io/cad2021_hw/">40923223</a></td>
 </tr>
-<tr>
-<td>40923224</td>
-<td><a href="https://s40923224.github.io/cad2021_hw/">40923224</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923224</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://s40923224.github.io/cad2021_hw/">40923224</a></td>
 </tr>
-<tr>
-<td>40923225</td>
-<td><a href="https://40923225.github.io/cad2021_hw/">40923225</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923225</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923225.github.io/cad2021_hw/">40923225</a></td>
 </tr>
-<tr>
-<td>40923226</td>
-<td><a href="https://40923226.github.io/cad2021_hw/">40923226</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923226</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923226.github.io/cad2021_hw/">40923226</a></td>
 </tr>
-<tr>
-<td>40923227</td>
-<td><a href="https://40923227.github.io/cad2021_hw/">40923227</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923227</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923227.github.io/cad2021_hw/">40923227</a></td>
 </tr>
-<tr>
-<td>40923228</td>
-<td><a href="https://40923228.github.io/cad2021_hw/">40923228</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923228</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923228.github.io/cad2021_hw/">40923228</a></td>
 </tr>
-<tr>
-<td>40923229</td>
-<td><a href="https://40923229.github.io/cad2021_hw/">40923229</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923229</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923229.github.io/cad2021_hw/">40923229</a></td>
 </tr>
-<tr>
-<td>40923230</td>
-<td><a href="https://40923230.github.io/cad2021_hw/">40923230</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923230</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923230.github.io/cad2021_hw/">40923230</a></td>
 </tr>
-<tr>
-<td>40923231</td>
-<td><a href="https://40923231.github.io/cad2021_hw/">40923231</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923231</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923231.github.io/cad2021_hw/">40923231</a></td>
 </tr>
-<tr>
-<td>40923232</td>
-<td><a href="https://40923232.github.io/cad2021_hw/">40923232</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923232</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923232.github.io/cad2021_hw/">40923232</a></td>
 </tr>
-<tr>
-<td>40923233</td>
-<td><a href="https://40923233.github.io/cad2021_hw/">40923233</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923233</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923233.github.io/cad2021_hw/">40923233</a></td>
 </tr>
-<tr>
-<td>40923234</td>
-<td><a href="https://40923234.github.io/cad2021_hw/">40923234</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923234</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923234.github.io/cad2021_hw/">40923234</a></td>
 </tr>
-<tr>
-<td>40923235</td>
-<td><a href="https://40923235.github.io/cad2021_hw/">40923235</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923235</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923235.github.io/cad2021_hw/">40923235</a></td>
 </tr>
-<tr>
-<td>40923236</td>
-<td><a href="https://40923236.github.io/cad2021_hw/">40923236</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923236</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923236.github.io/cad2021_hw/">40923236</a></td>
 </tr>
-<tr>
-<td>40923237</td>
-<td><a href="https://40923237.github.io/cad2021_hw/">40923237</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923237</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923237.github.io/cad2021_hw/">40923237</a></td>
 </tr>
-<tr>
-<td>40923238</td>
-<td><a href="https://40923238.github.io/cad2021_hw/">40923238</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923238</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923238.github.io/cad2021_hw/">40923238</a></td>
 </tr>
-<tr>
-<td>40923239</td>
-<td><a href="https://40923239.github.io/cad2021_hw/">40923239</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923239</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923239.github.io/cad2021_hw/">40923239</a></td>
 </tr>
-<tr>
-<td>40923240</td>
-<td><a href="https://40923240.github.io/cad2021_hw/">40923240</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923240</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923240.github.io/cad2021_hw/">40923240</a></td>
 </tr>
-<tr>
-<td>40923241</td>
-<td><a href="https://40923241.github.io/cad2021_hw/">40923241</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923241</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923241.github.io/cad2021_hw/">40923241</a></td>
 </tr>
-<tr>
-<td>40923242</td>
-<td><a href="https://40923242.github.io/cad2021_hw/">40923242</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923242</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923242.github.io/cad2021_hw/">40923242</a></td>
 </tr>
-<tr>
-<td>40923243</td>
-<td><a href="https://40923243.github.io/cad2021_hw/">40923243</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923243</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923243.github.io/cad2021_hw/">40923243</a></td>
 </tr>
-<tr>
-<td>40923244</td>
-<td><a href="https://40923244.github.io/cad2021_hw/">40923244</a></td>
+<tr style="height: 14.175px;">
+<td style="height: 14.175px; width: 276px;">40923244</td>
+<td style="height: 14.175px; width: 244.425px;"><a href="https://40923244.github.io/cad2021_hw/">40923244</a></td>
 </tr>
-<tr>
-<td>40923245</td>
-<td><a href="https://40923245-1.github.io/cad2021_hw/">40923245</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923245</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923245-1.github.io/cad2021_hw/">40923245</a></td>
 </tr>
-<tr>
-<td>40923246</td>
-<td><a href="https://40923246.github.io/cad2021_hw/">40923246</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923246</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923246.github.io/cad2021_hw/">40923246</a></td>
 </tr>
-<tr>
-<td>40923247</td>
-<td><a href="https://40923247.github.io/cad2021_hw/">40923247</a></td>
+<tr style="height: 14px;">
+<td style="height: 14px; width: 276px;">40923247</td>
+<td style="height: 14px; width: 244.425px;"><a href="https://40923247.github.io/cad2021_hw/">40923247</a></td>
 </tr>
 </tbody>
 </table>
-<h1>HW1</h1>
+<p></p>
+<h2>第二種</h2><h1>HW1</h1>
 <p>HW1 佔學期成績 25%</p>
 <p><span style="background-color: #ffff99;">HW1 必須在 2021.11.10 22:00 之前完成.<br/></span></p>
 <p><a href="https://github.com/mdecourse/cad2021/discussions/5">HW1 具體項目成果回報區</a>將於 2021.09.23 開啟, 於 <span style="background-color: #ff99cc;">2021.11.10 22:00 關閉.</span></p>
