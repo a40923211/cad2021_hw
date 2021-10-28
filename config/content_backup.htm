@@ -249,7 +249,24 @@
 </tbody>
 </table>
 <p></p>
-<h2>第二種</h2><h1>HW1</h1>
+<h2>第二種</h2>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 將資料存入 gist, 取其 url
+url = "https://gist.githubusercontent.com/mdecourse/b11a88a98655d41055c47f08fe94788f/raw/8a27e6885ee1a5074bcf864d741679afeac796c4/2b_w2_stud_list.txt"
+# 利用 open() 開啟 url 後, 以 readlines() 讀取後可納入數列
+data = open(url).readlines()
+# 檢查資料筆數, 第一筆為 title
+#print(data)
+#print(len(data))
+data = data[1:]
+#print(data)
+for i in range(len(data)):
+    num_github = data[i] 
+    num = num_github.split("\t")[0]
+    account = num_github.split("\t")[1]
+    if account == "":
+        account = num
+    print("&lt;a href='https://" + str(account) + ".github.io/cad2021_hw'&gt;"+ str(num) + "&lt;/a&gt;")</pre>
+<p></p><h1>HW1</h1>
 <p>HW1 佔學期成績 25%</p>
 <p><span style="background-color: #ffff99;">HW1 必須在 2021.11.10 22:00 之前完成.<br/></span></p>
 <p><a href="https://github.com/mdecourse/cad2021/discussions/5">HW1 具體項目成果回報區</a>將於 2021.09.23 開啟, 於 <span style="background-color: #ff99cc;">2021.11.10 22:00 關閉.</span></p>
@@ -331,11 +348,12 @@ end</pre>
 <p><img alt="" class="add_border" height="282" src="/images/meArm_linkage_dimension.png" width="600"/></p>
 <p>(From: <a href="/downloads/2016_ADDITIVE MANUFACTURING PROCESSES FOR FABRICATING A MINI ROBOT - COMPUTATIONAL MODELS AND EXPERIMENTAL RESULTS.pdf">2016_ADDITIVE MANUFACTURING PROCESSES FOR FABRICATING A MINI ROBOT - COMPUTATIONAL MODELS AND EXPERIMENTAL RESULTS.pdf</a>)</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/2pFReCfDZsU" title="YouTube video player" width="560"></iframe></p>
-<h2>CAD1 繪圖</h2>
-<p>CAD1 指各學員所分配到的第一套參數式 CAD 套件, 其中包括 Solidworks, Inventor, NX, Onshape 與 Solvespace.</p>
-<p>CAD1 緣起說明與介紹</p>
-<p>請不要直接從找到的 CAD1 套件說明複製貼上, 而是應該要看完各種參考資料後, 重新打字彙整.</p>
-<h3>CAD1 安裝配置</h3>
+<h2>CAD1 繪圖和歷史說明</h2>
+<p></p>
+<p>solidwork  緣起說明與介紹</p>
+<p><span>SolidWorks公司成立於1993年12月，其總部設在</span><a class="mw-redirect" href="https://zh.wikipedia.org/wiki/%E7%BE%8E%E5%9C%8B" title="美國">美國</a><a href="https://zh.wikipedia.org/wiki/%E9%BA%BB%E5%B7%9E" title="麻州">麻州</a><a class="new" href="https://zh.wikipedia.org/w/index.php?title=%E5%BA%B7%E5%85%8B%E7%88%BE%E9%83%A1&amp;action=edit&amp;redlink=1" title="康克爾郡（頁面不存在）">康克爾郡</a><span>，西元1995年發表其第一款產品</span><b>SolidWorks 95</b><span>，1997年被</span><a href="https://zh.wikipedia.org/wiki/%E8%BE%BE%E7%B4%A2%E7%B3%BB%E7%BB%9F" title="達梭系統">達梭系統</a><span>併購，SolidWorks公司現在是達梭系統的子公司。</span></p>
+<p><span></span></p>
+<p></p><h3>CAD1 安裝配置</h3>
 <p>CAD1 指各學員所分配到的第一套參數式 CAD 套件, 其中包括 Solidworks, Inventor, NX, Onshape 與 Solvespace.</p>
 <p>CAD1 套件下載安裝與配置</p>
 <p>CAD1 下載安裝與配置流程 embedded 影片: 標題必須為「<span style="background-color: #ffff99;">NFU - MDE - cad2021 - 學號 - SW2020 下載安裝與配置</span>」且加上<span style="background-color: #ccffcc;">語音說明</span>與<span style="background-color: #ccffcc;">字幕.</span></p>
